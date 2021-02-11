@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args, queue, searcher) => {
             else
                 message.channel.send("El loop ha sido **deshabilitado** en toda la cola")
             break;
-        case 'all':
+        case 'one':
             serverQueue.loopone = !serverQueue.loopone;
             serverQueue.loopall = false;
 

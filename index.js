@@ -35,7 +35,17 @@ fs.readdir("./commands/", (e, f) => {
 const queue = new Map();
 
 client.on("ready", () => {
-    console.log("I am online!")
+
+    console.log("Deadbeat") 
+    client.user.setPresence({
+        status: "online",
+        activity: {
+            name: "HOLOLIVE",
+            type: "WATCHING"
+
+        }
+    })
+
 })
  
 client.on("message", async(message) => {

@@ -34,19 +34,15 @@ fs.readdir("./commands/", (e, f) => {
 
 const queue = new Map();
 
-client.on("ready", () => {
-
-    console.log("Deadbeat") 
-    client.user.setPresence({
-        status: "online",
-        activity: {
-            name: "HOLOLIVE",
-            type: "WATCHING"
-
-        }
-    })
-
+client.on("ready", async() => {
+    console.log("Im horny")
+    await client.user.setActivity("Hololive", {
+      url: "https://www.twitch.tv/jotis_1",
+      type: "STREAMING",//can be LISTENING, WATCHING, PLAYING, STREAMING
+    });
+  
 })
+  
  
 client.on("message", async(message) => {
     const prefix = 'm!';
